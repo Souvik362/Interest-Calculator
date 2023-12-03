@@ -1,0 +1,27 @@
+def interest(p, t, r):
+    if t > 0 and t <= 1:
+        r = 4.5
+    elif t > 1 and t <= 2:
+        r = 5.5
+    elif t > 3 and t <= 5:
+        r = 7.40
+    else:
+        r = 6.5
+
+    si = (p * t * r) / 100
+    MIS = (si / t) / 12
+    print("Interest earned is: Rs.", si)
+    print("Maturity amount is: Rs.", si + p)
+    print("Monthly interest is: Rs.", MIS)
+    print("Applicable ROI:",r)
+    print("Thank for banking with us.")
+
+
+p = int(input("Enter the principal amount: Rs."))
+t = int(input("Enter the time period: "))
+r = 0
+if p >= 100 and t > 0:
+    interest(p, t, r)
+else:
+    print("Not sufficient time or amount for deposit.")
+    print("Thanks for banking with us.")
